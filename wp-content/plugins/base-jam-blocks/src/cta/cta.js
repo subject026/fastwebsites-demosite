@@ -48,8 +48,8 @@ registerBlockType("base-jam-blocks/cta", {
 			attribute: "alt",
 			selector: "img",
 		},
-		srcSet: {
-			type: "string",
+		imgSizes: {
+			type: "array",
 		},
 		description: {
 			type: "string",
@@ -73,7 +73,7 @@ registerBlockType("base-jam-blocks/cta", {
 			props.setAttributes({
 				imgSrc: img.url,
 				imgID: img.id,
-				srcSet: "boof",
+				imgSizes: img.sizes,
 				// imgAlt: img.alt,
 			});
 		};
@@ -126,3 +126,11 @@ registerBlockType("base-jam-blocks/cta", {
 		);
 	},
 });
+
+// const buildSrcset = (sizes) => {
+// 	let  str;
+// 	sizes.forEach(size => {
+// 		str = str + ``
+// 	})
+// 	return str;
+// }
